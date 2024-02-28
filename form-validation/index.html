@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="form-container">
+      <form
+        action="https://httpbin.org/get"
+        method="get"
+        class="form"
+        id="form"
+      >
+        <h2>sign up</h2>
+        <div class="form-row">
+          <label for="email" class="form-label">email</label>
+          <input
+            class="form-input"
+            type="email"
+            name="email"
+            id="email"
+            required
+          />
+        </div>
+        <div class="form-row">
+          <label for="password" class="form-label">password</label>
+          <input
+            class="form-input"
+            type="password"
+            name="password"
+            id="password"
+            required
+          />
+          <div class="password-requirement">
+            <input
+              type="checkbox"
+              name="characters"
+              id="characters"
+              class="requirements"
+              disabled
+            />
+            <label for="characters"> 6 or more characters</label>
+          </div>
+          <div class="password-requirement">
+            <input
+              type="checkbox"
+              name="symbol"
+              id="symbol"
+              class="requirements"
+              disabled
+            />
+            <label for="symbol">Include at least a symbol</label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-block">submit</button>
+      </form>
+    </main>
+    <script src="./index.js"></script>
+  </body>
+</html>
